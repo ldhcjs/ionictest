@@ -18,8 +18,18 @@ import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue
 import ExploreContainer from '@/components/ExploreContainer.vue';
 import { IonProgressBar } from '@ionic/vue';
 import { defineComponent } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import router from '@/router';
 
 export default defineComponent({
   components: { IonProgressBar },
+  mounted() {
+    const navigateToPage = () => {
+      setTimeout(() => {
+        router.push('/tabs/');
+      }, 2000);
+    };
+    navigateToPage();
+  }
 });
 </script>
