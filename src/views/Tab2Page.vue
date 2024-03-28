@@ -12,10 +12,15 @@
           <div class="message left" v-if="item.type === 'question'">
             {{ item.text }}
             <div class="options">
-              <ion-button v-for="option in item.options" :key="option"
-              :disabled="item.answered"
-              @click="handleAnswer(index, option)"
-              :class="{ selected: item.selectedOption === option }">
+              <ion-button
+                v-for="option in item.options"
+                :key="option"
+                :disabled="item.answered"
+                :class="{
+                  selected: item.selectedOption === option,
+                }"
+                @click="handleAnswer(index, option)"
+              >
                 {{ option }}
               </ion-button>
             </div>
@@ -30,8 +35,15 @@
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/vue';
-import { ref } from 'vue';
+import {
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonButton,
+} from "@ionic/vue";
+import { ref } from "vue";
 
 // 질문 타입 정의
 type QAItem = {
@@ -39,7 +51,7 @@ type QAItem = {
   text: string;
   options?: string[];
   answered: boolean;
-  type: 'question' | 'answer';
+  type: "question" | "answer";
   selectedOption?: string; // 선택된 답변을 추적하기 위한 필드
 };
 
@@ -47,24 +59,24 @@ type QAItem = {
 const QList = ref<QAItem[]>([
   {
     id: 1,
-    text: '가장 좋아하는 계절은 무엇인가요?',
-    options: ['봄', '여름', '가을', '겨울'],
+    text: "가장 좋아하는 계절은 무엇인가요?",
+    options: ["봄", "여름", "가을", "겨울"],
     answered: false,
-    type: 'question' // 이 부분 추가
+    type: "question", // 이 부분 추가
   },
   {
     id: 2,
-    text: '커피를 선호하시나요, 차를 선호하시나요?',
-    options: ['커피', '차', '둘 다', '둘 다 아님'],
+    text: "커피를 선호하시나요, 차를 선호하시나요?",
+    options: ["커피", "차", "둘 다", "둘 다 아님"],
     answered: false,
-    type: 'question' // 이 부분 추가
+    type: "question", // 이 부분 추가
   },
   {
     id: 3,
-    text: '책이 좋아 게임이 좋아?',
-    options: ['책', '게임', '산책', '셋 다 아님'],
+    text: "책이 좋아 게임이 좋아?",
+    options: ["책", "게임", "산책", "셋 다 아님"],
     answered: false,
-    type: 'question' // 이 부분 추가
+    type: "question", // 이 부분 추가
   },
   // 추가 질문들...
 ]);
@@ -81,8 +93,8 @@ function handleAnswer(questionIndex: number, option: string) {
   AListView.value.push({
     id: AListView.value.length + 1,
     text: option,
-    type: 'answer', // 타입 명시
-    answered: true // 답변됨으로 설정
+    type: "answer", // 타입 명시
+    answered: true, // 답변됨으로 설정
   });
 
   // 현재 질문에 답변됨 표시
@@ -90,11 +102,13 @@ function handleAnswer(questionIndex: number, option: string) {
   AListView.value[questionIndex].selectedOption = option; // 선택된 옵션 저장
 
   // 다음 질문을 A 리스트뷰에 추가, 옵셔널 체이닝을 사용하여 안전하게 다음 요소 접근
-  const nextQuestion = QList.value.find(q => q.id === AListView.value[questionIndex].id + 1);
+  const nextQuestion = QList.value.find(
+    (q) => q.id === AListView.value[questionIndex].id + 1
+  );
   if (nextQuestion) {
     AListView.value.push({
       ...nextQuestion,
-      type: 'question' // 이미 정의되어 있으므로 변경 필요 없음
+      type: "question", // 이미 정의되어 있으므로 변경 필요 없음
     });
   }
 }
@@ -105,23 +119,28 @@ function handleAnswer(questionIndex: number, option: string) {
   display: flex;
   flex-direction: column;
 }
+
 .message {
   padding: 10px;
   margin: 5px;
   border-radius: 20px;
 }
+
 .left {
   align-self: flex-start;
   background-color: #e5e5ea;
 }
+
 .right {
   align-self: flex-end;
   background-color: #007aff;
   color: white;
 }
+
 .options ion-button {
   margin-top: 4px;
 }
+
 .selected {
   --background: skyblue;
 }
