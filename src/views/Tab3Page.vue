@@ -42,5 +42,9 @@ import {
   IonToolbar,
   IonTitle,
   IonContent,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonButton,
 } from "@ionic/vue";
 </script>
