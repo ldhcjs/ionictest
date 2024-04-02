@@ -1,10 +1,11 @@
 <template>
   <ion-card>
     <ion-card-header>
-      <div style="display: flex; align-items: center">
+      <ion-item class="no-padding-start-end" lines="none" >
         <ion-icon :icon="atCircle" size="large" />
         <ion-card-title class="margin-start-8px">Class Title</ion-card-title>
-      </div>
+      </ion-item>
+        
     </ion-card-header>
     <ion-card-content>
       <ion-grid>
@@ -90,6 +91,7 @@ import {
   IonRow,
   IonIcon,
   IonCardTitle,
+  IonItem
 } from "@ionic/vue";
 import {
   heart,
@@ -128,5 +130,9 @@ ion-grid {
 }
 .margin-start-8px {
   margin-inline-start: 8px;
+}
+.no-padding-start-end {
+  --padding-start: 0px;
+  --inner-padding-end: 0px;
 }
 </style>
