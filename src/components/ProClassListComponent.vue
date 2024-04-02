@@ -5,23 +5,30 @@
         <ion-icon :icon="atCircle" size="large" />
         <ion-card-title class="margin-start-8px">Class Title</ion-card-title>
       </ion-item>
-        
     </ion-card-header>
     <ion-card-content>
       <ion-grid>
-        <ion-row class="center-align margin-bottom-12px">
-          <ion-icon :icon="heart" size="large" />
+        <ion-row class="center-align margin-bottom-12px background_rgb_254_248_244 rounded-item">
+          <ion-icon :icon="heart" class="icon-size-48px" />
           <ion-col />
           <!-- 사이 여백용 -->
-          <ion-label>권 조셉</ion-label>
+          <ion-label class="font-size-24px">김 골프</ion-label>
           <ion-col />
+        </ion-row>
+        <ion-row class="center-align margin-bottom-12px">
           <!-- 사이 여백용 -->
           <ion-icon :icon="calendarOutline" size="large" />
           <ion-col />
           <!-- 사이 여백용 -->
           <ion-label>2024-03-29</ion-label>
+          <ion-col />
+          <!-- 사이 여백용 -->
+          <ion-icon :icon="diamond" size="large" />
+          <ion-col />
+          <!-- 사이 여백용 -->
+          <ion-label>500,000</ion-label>
         </ion-row>
-        <ion-row class="center-align margin-bottom-12px" style="background-color: rgb(254, 248, 244)">
+        <ion-row class="center-align margin-bottom-12px background_rgb_254_248_244 rounded-item">
           <ion-col size="auto">
             <ion-row>
               <ion-icon :icon="airplane" size="large" />
@@ -63,18 +70,6 @@
             </ion-row>
           </ion-col>
         </ion-row>
-        <ion-row class="center-align">
-          <ion-icon :icon="people" size="large" />
-          <ion-col />
-          <!-- 사이 여백용 -->
-          <ion-label>김은환</ion-label>
-          <ion-col />
-          <!-- 사이 여백용 -->
-          <ion-icon :icon="diamond" size="large" />
-          <ion-col />
-          <!-- 사이 여백용 -->
-          <ion-label>500,000</ion-label>
-        </ion-row>
       </ion-grid>
     </ion-card-content>
   </ion-card>
@@ -111,6 +106,9 @@ import {
 ion-grid {
   padding: 0px;
 }
+.background_rgb_254_248_244 {
+  background-color: rgb(254, 248, 244)
+}
 .center-align {
   display: flex;
   justify-content: center;
@@ -134,5 +132,15 @@ ion-grid {
 .no-padding-start-end {
   --padding-start: 0px;
   --inner-padding-end: 0px;
+}
+.icon-size-48px {
+  font-size: 48px;
+}
+.font-size-24px {
+  font-size: 24px;
+}
+.rounded-item {
+  overflow: hidden;
+  border-radius: 10px;
 }
 </style>

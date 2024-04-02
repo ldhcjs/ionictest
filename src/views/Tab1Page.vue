@@ -11,7 +11,8 @@
           <ion-title size="large">Tab 1</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ClassListComponent/>
+      <UserClassListComponent/>
+      <ProClassListComponent/>
     </ion-content>
   </ion-page>
 </template>
@@ -25,5 +26,6 @@ import {
   IonContent,
 } from "@ionic/vue";
 import ExploreContainer from "@/components/ExploreContainer.vue";
-import ClassListComponent from "@/components/ClassListComponent.vue";
+import UserClassListComponent from "@/components/UserClassListComponent.vue";
+import ProClassListComponent from "@/components/ProClassListComponent.vue";
 </script>
