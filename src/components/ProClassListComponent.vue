@@ -106,41 +106,4 @@ import {
 ion-grid {
   padding: 0px;
 }
-.background_rgb_254_248_244 {
-  background-color: rgb(254, 248, 244)
-}
-.center-align {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.start-align {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-.margin-top-bottom-4px {
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.margin-bottom-12px {
-  margin-bottom: 12px;
-}
-.margin-start-8px {
-  margin-inline-start: 8px;
-}
-.no-padding-start-end {
-  --padding-start: 0px;
-  --inner-padding-end: 0px;
-}
-.icon-size-48px {
-  font-size: 48px;
-}
-.font-size-24px {
-  font-size: 24px;
-}
-.rounded-item {
-  overflow: hidden;
-  border-radius: 10px;
-}
 </style>

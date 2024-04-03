@@ -25,7 +25,6 @@ import {
   IonTitle,
   IonContent,
 } from "@ionic/vue";
-import ExploreContainer from "@/components/ExploreContainer.vue";
 import UserClassListComponent from "@/components/UserClassListComponent.vue";
 import ProClassListComponent from "@/components/ProClassListComponent.vue";
 </script>
