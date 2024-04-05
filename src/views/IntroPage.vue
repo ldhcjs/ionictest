@@ -15,29 +15,27 @@
   </ion-page>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import {
   IonPage,
   IonHeader,
   IonToolbar,
   IonTitle,
   IonContent,
+  IonProgressBar,
+  IonImg
 } from "@ionic/vue";
-import ExploreContainer from "@/components/ExploreContainer.vue";
-import { IonProgressBar } from "@ionic/vue";
-import { defineComponent } from "vue";
-import { createRouter, createWebHistory } from "vue-router";
-import router from "@/router";
 
-export default defineComponent({
-  components: { IonProgressBar },
-  mounted() {
-    const navigateToPage = () => {
-      setTimeout(() => {
-        router.push("/tabs/");
-      }, 2000);
-    };
-    navigateToPage();
-  },
+import {} from "@ionic/vue";
+import { onMounted } from "vue";
+import { useRouter } from "vue-router";
+
+// useRouter 훅을 사용하여 라우터 인스턴스에 접근합니다.
+const router = useRouter();
+
+onMounted(() => {
+  setTimeout(() => {
+    router.push("/tabs/");
+  }, 2000);
 });
 </script>

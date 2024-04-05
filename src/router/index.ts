@@ -1,16 +1,17 @@
 import { createRouter, createWebHistory } from "@ionic/vue-router";
 import { RouteRecordRaw } from "vue-router";
-import TabsPage from "../views/TabsPage.vue";
-import IntroPage from "../views/Intro.vue";
+import TabsPage from "@/views/TabsPage.vue";
+import IntroPage from "@/views/IntroPage.vue";
+import Tab4PageDetail from "@/views/Tab4PageDetail.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    redirect: "/intro/",
+    redirect: "/introPage/",
   },
   {
-    path: "/intro/",
-    name: "Intro",
+    path: "/introPage/",
+    name: "IntroPage",
     component: IntroPage,
   },
   {
@@ -36,6 +37,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: "tab4",
         component: () => import("@/views/Tab4Page.vue"),
+      },
+      {
+        path: '/tab4/detail/:chatId',
+        component: Tab4PageDetail,
       },
       {
         path: "tab5",
