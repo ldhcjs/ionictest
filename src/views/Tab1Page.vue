@@ -13,6 +13,7 @@
       </ion-header>
       <UserClassListComponent/>
       <ProClassListComponent/>
+      <ProItemListComponent/>
     </ion-content>
   </ion-page>
 </template>
@@ -27,4 +28,5 @@ import {
 } from "@ionic/vue";
 import UserClassListComponent from "@/components/UserClassListComponent.vue";
 import ProClassListComponent from "@/components/ProClassListComponent.vue";
+import ProItemListComponent from "@/components/ProItemListComponent.vue";
 </script>
