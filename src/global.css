@@ -10,6 +10,14 @@
   justify-content: center;
   align-items: center;
 }
+.center-align-label {
+  text-align: center; /* 텍스트 가운데 정렬 */
+  display: block; /* 라벨을 블록 요소로 만들어 전체 너비를 차지하게 함 */
+}
+.space-between-align {
+  display: flex;
+  justify-content: space-between;
+}
 .start-align {
   display: flex;
   justify-content: start;
@@ -18,6 +26,10 @@
 .margin-top-bottom-4px {
   margin-top: 4px;
   margin-bottom: 4px;
+}
+.margin-top-bottom-12px {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 .margin-bottom-12px {
   margin-bottom: 12px;

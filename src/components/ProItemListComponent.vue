@@ -18,26 +18,28 @@
 
           <ion-item class="--min-height-0px no-padding-start-end" lines="none">
             <ion-label class="margin-top-bottom-4px">소속</ion-label>
-            <ion-label class="margin-top-bottom-4px">KPGA</ion-label>
+            <ion-label slot="end" class="margin-top-bottom-4px">KPGA</ion-label>
           </ion-item>
 
           <ion-item class="--min-height-0px no-padding-start-end" lines="none">
             <ion-label class="margin-top-bottom-4px">지역</ion-label>
-            <ion-label class="margin-top-bottom-4px">서울</ion-label>
+            <ion-label slot="end" class="margin-top-bottom-4px">서울</ion-label>
           </ion-item>
 
           <ion-item class="--min-height-0px no-padding-start-end" lines="none">
             <ion-label class="margin-top-bottom-4px">평균레슨비용</ion-label>
-            <ion-label class="margin-top-bottom-4px">300,000</ion-label>
+            <ion-label slot="end" class="margin-top-bottom-4px">300,000</ion-label>
           </ion-item>
 
           <ion-item class="--min-height-0px no-padding-start-end" lines="none">
             <ion-chip color="success">신규</ion-chip>
             <ion-chip color="warning">인기</ion-chip>
+            <ion-badge color="primary" slot="end">9.5</ion-badge>
           </ion-item>
-          
-          <ion-badge color="primary" slot="end">9.5</ion-badge>
         </ion-col>
+      </ion-row>
+      <ion-row class="margin-top-bottom-12px center-align">
+        <ion-label>레슨을 통해 필드의 즐거움을 느껴보세요!</ion-label>
       </ion-row>
     </ion-grid>
   </ion-card>
@@ -56,6 +58,8 @@ import {
   IonCardTitle,
   IonItem,
   IonImg,
+  IonChip,
+  IonBadge
 } from "@ionic/vue";
 import {
   heart,
