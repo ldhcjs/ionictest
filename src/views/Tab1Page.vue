@@ -15,6 +15,7 @@
       <ProClassListComponent/>
       <ProItemListComponent/>
     </ion-content>
+  <!-- <NaverMapView/> -->
   </ion-page>
 </template>
 
@@ -29,4 +30,5 @@ import {
 import UserClassListComponent from "@/components/UserClassListComponent.vue";
 import ProClassListComponent from "@/components/ProClassListComponent.vue";
 import ProItemListComponent from "@/components/ProItemListComponent.vue";
+// import NaverMapView from "@/components/NaverMapView.vue";
 </script>
