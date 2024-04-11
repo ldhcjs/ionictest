@@ -11,11 +11,12 @@
           <ion-title size="large">Tab 1</ion-title>
         </ion-toolbar>
       </ion-header>
-      <UserClassListComponent/>
-      <ProClassListComponent/>
-      <ProItemListComponent/>
+      <NaverLogin />
+      <UserClassListComponent />
+      <ProClassListComponent />
+      <ProItemListComponent />
     </ion-content>
-  <!-- <NaverMapView/> -->
+    <!-- <NaverMapView/> -->
   </ion-page>
 </template>
 
@@ -31,4 +32,5 @@ import UserClassListComponent from "@/components/UserClassListComponent.vue";
 import ProClassListComponent from "@/components/ProClassListComponent.vue";
 import ProItemListComponent from "@/components/ProItemListComponent.vue";
 // import NaverMapView from "@/components/NaverMapView.vue";
+import NaverLogin from "@/components/NaverLogin.vue";
 </script>
