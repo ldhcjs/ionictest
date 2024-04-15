@@ -26,10 +26,10 @@ onMounted(async () => {
     await loadScript('https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js', 'naver-login-sdk');
     await loadScript('http://code.jquery.com/jquery-1.11.3.min.js', 'jquery');
 
-    const naver_id_login = new (window as any).naver_id_login('NmCqXn1xN_tFIxS3uANo', 'http://localhost:8100/');
+    const naver_id_login = new (window as any).naver_id_login('NmCqXn1xN_tFIxS3uANo', 'http://localhost:8100/naverLoginCallback/');
     const state = naver_id_login.getUniqState();
     naver_id_login.setButton("white", 2, 40);
-    naver_id_login.setDomain("http://localhost:8100/");
+    naver_id_login.setDomain("http://localhost:8100/naverLoginCallback/");
     naver_id_login.setState(state);
     naver_id_login.setPopup();
     naver_id_login.init_naver_id_login();

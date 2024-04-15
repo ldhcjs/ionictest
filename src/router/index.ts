@@ -3,6 +3,7 @@ import { RouteRecordRaw } from "vue-router";
 import TabsPage from "@/views/TabsPage.vue";
 import IntroPage from "@/views/IntroPage.vue";
 import Tab4PageDetail from "@/views/Tab4PageDetail.vue";
+import NaverLoginCallback from "@/components/NaverLoginCallback.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -13,6 +14,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/introPage/",
     name: "IntroPage",
     component: IntroPage,
+  },
+  {
+    path: "/naverLoginCallback/",
+    name: "NaverLoginCallback",
+    component: NaverLoginCallback,
   },
   {
     path: "/tabs/",
