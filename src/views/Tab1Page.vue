@@ -12,6 +12,7 @@
         </ion-toolbar>
       </ion-header>
       <NaverLogin />
+      <KakaoLogin />
       <UserClassListComponent />
       <ProClassListComponent />
       <ProItemListComponent />
@@ -33,4 +34,5 @@ import ProClassListComponent from "@/components/ProClassListComponent.vue";
 import ProItemListComponent from "@/components/ProItemListComponent.vue";
 // import NaverMapView from "@/components/NaverMapView.vue";
 import NaverLogin from "@/components/NaverLogin.vue";
+import KakaoLogin from "@/components/KakaoLogin.vue" ;
 </script>
