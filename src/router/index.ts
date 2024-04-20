@@ -4,6 +4,7 @@ import TabsPage from "@/views/TabsPage.vue";
 import IntroPage from "@/views/IntroPage.vue";
 import Tab4PageDetail from "@/views/Tab4PageDetail.vue";
 import NaverLoginCallback from "@/components/NaverLoginCallback.vue";
+import Notifications from "@/components/Notifications.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -19,6 +20,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/naverLoginCallback/",
     name: "NaverLoginCallback",
     component: NaverLoginCallback,
+  },
+  {
+    path: "/Notifications/",
+    name: "Notifications",
+    component: Notifications,
   },
   {
     path: "/tabs/",
@@ -45,7 +51,7 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("@/views/Tab4Page.vue"),
       },
       {
-        path: '/tab4/detail/:chatId',
+        path: "/tab4/detail/:chatId",
         component: Tab4PageDetail,
       },
       {

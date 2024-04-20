@@ -22,7 +22,7 @@
             <ion-button expand="block" color="medium">프로필스토리</ion-button>
           </ion-col>
           <ion-col size="6">
-            <ion-button expand="block" color="medium">내 예약 관리</ion-button>
+            <ion-button expand="block" color="medium" @click="goToNotifications">내 예약 관리</ion-button>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -47,4 +47,12 @@ import {
   IonCol,
   IonButton,
 } from "@ionic/vue";
+import { useRouter } from "vue-router";
+
+// 페이지 라우터 설정
+const router = useRouter();
+
+const goToNotifications = () => {
+  router.push(`/Notifications/`);
+}
 </script>
