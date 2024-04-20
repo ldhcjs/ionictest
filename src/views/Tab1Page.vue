@@ -16,6 +16,7 @@
       <UserClassListComponent />
       <ProClassListComponent />
       <ProItemListComponent />
+      <PermissionModal />
     </ion-content>
     <!-- <NaverMapView/> -->
   </ion-page>
@@ -44,6 +45,7 @@ import ProItemListComponent from "@/components/ProItemListComponent.vue";
 // import NaverMapView from "@/components/NaverMapView.vue";
 import NaverLogin from "@/components/NaverLogin.vue";
 import KakaoLoginRESTful from "@/components/KakaoLoginRESTful.vue" ;
+import PermissionModal from "@/components/PermissionModal.vue";
 
 // Kakao RESTful API
 const REST_API_KEY = "bfabe35c3600f19f5cb469dde5a36569"; // 카카오 REST API 키
