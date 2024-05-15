@@ -19,7 +19,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="6">
-            <ion-button expand="block" color="medium">프로필스토리</ion-button>
+            <ion-button expand="block" color="medium" @click="goToTab3New">프로필스토리</ion-button>
           </ion-col>
           <ion-col size="6">
             <ion-button expand="block" color="medium" @click="goToNotifications">내 예약 관리</ion-button>
@@ -54,5 +54,9 @@ const router = useRouter();
 
 const goToNotifications = () => {
   router.push(`/Notifications/`);
+}
+
+const goToTab3New = () => {
+  router.push(`/tabs/tab3new`);
 }
 </script>

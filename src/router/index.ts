@@ -47,6 +47,10 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("@/views/Tab3Page.vue"),
       },
       {
+        path: "tab3new",
+        component: () => import("@/views/Tab3Page_new.vue"),
+      },
+      {
         path: "tab4",
         component: () => import("@/views/Tab4Page.vue"),
       },

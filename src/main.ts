@@ -25,8 +25,12 @@ import "@ionic/vue/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 
+/* Swiper 9 register */
+import { register } from "swiper/element/bundle";
+
 const app = createApp(App).use(IonicVue).use(router);
 
 router.isReady().then(() => {
   app.mount("#app");
+  register();
 });
