@@ -15,10 +15,37 @@
       </ion-card>
 
       <!-- 이벤트 및 광고 영역 -->
-      <swiper-container loop="true" pagination="true">
-        <swiper-slide><ion-button>Slide 1</ion-button></swiper-slide>
-        <swiper-slide><ion-button>Slide 2</ion-button></swiper-slide>
-        <swiper-slide><ion-button>Slide 3</ion-button></swiper-slide>
+      <swiper-container loop="true" pagination="true" class="mySwiper">
+        <swiper-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Slide 1</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              This is the content of slide 1
+            </ion-card-content>
+          </ion-card>
+        </swiper-slide>
+        <swiper-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Slide 2</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              This is the content of slide 2
+            </ion-card-content>
+          </ion-card>
+        </swiper-slide>
+        <swiper-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Slide 3</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              This is the content of slide 3
+            </ion-card-content>
+          </ion-card>
+        </swiper-slide>
       </swiper-container>
 
       <!-- 프로 찾기 -->
@@ -58,9 +85,9 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonCardContent,
-  IonLabel,
   IonButton,
 } from "@ionic/vue";
+import "swiper/swiper-bundle.css";
 
 const greetingMessage = ref("Guest님 반가워요!");
 const todayMeeting = ref(1234);
@@ -72,5 +99,9 @@ const myReservationCount = ref(1);
 <style scoped>
 .no-shadow {
   --box-shadow: none;
+}
+.mySwiper {
+  width: 100%;
+  height: auto;
 }
 </style>
