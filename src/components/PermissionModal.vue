@@ -95,7 +95,7 @@ const modalDismissed = () => {
 .permission-modal {
   --width: 90%;
   --height: 70%;
-  --border-radius: 20px;
+  --border-radius: 6px;
   margin-top: auto;
   margin-bottom: auto;
 }
